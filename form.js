@@ -16,8 +16,8 @@ const dynamoDBClient = new DynamoDBClient({ region, credentials });
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Registration route - GET request for /register.html
-app.get('/register.html', (req, res) => {
+// Registration route - GET 
+app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
